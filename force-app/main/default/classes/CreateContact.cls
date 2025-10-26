@@ -5,6 +5,10 @@ public with sharing class CreateContact {
         }
         list<Contact> contactlist2 =[SELECT Id from Contact WHERE id IN:contactlist];
         system.debug('contactlist2>>'contactlist2);
-
+    }
+    public static void handleContactLinkToAccount(list<Contact>contactlist){
+        if(contactlist!=null){
+            system.debug('contactlist>>'+contactlist);
+        }
     }
 }
